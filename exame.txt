@@ -1,0 +1,60 @@
+Desafio: Sistema de Gerenciamento de Frota de Carros em Go
+
+Crie um sistema para monitorar diferentes tipos de veículos em uma frota, com os seguintes requisitos:
+1. Interface Carro
+
+Defina uma interface Carro que exija métodos para - ok 
+
+    Obter o modelo do carro
+
+    Obter a categoria (ex: "sedan", "SUV", "elétrico")
+
+    Calcular custo de manutenção mensal (baseado em regras específicas de cada tipo)
+
+    Verificar se está dentro do prazo de revisão (comparar data atual com última revisão)
+
+2. Tipos Concretos - ok
+
+Implemente pelo menos 2 structs diferentes que satisfaçam Carro, como:
+
+    CarroEletrico (com campos como capacidade da bateria, autonomia por carga)
+
+    CarroCombustao (com campos como cilindrada, tipo de combustível)
+
+3. Registro Genérico Frota
+
+Crie uma struct genérica Frota que: - ok 
+
+    Aceite apenas tipos que implementem Carro
+
+    Armazene veículos com data de aquisição e quilometragem atual
+
+    Tenha métodos para:
+
+        Adicionar veículos à frota
+
+        Calcular custo total de manutenção mensal
+
+        Filtrar veículos por categoria
+
+        Identificar carros com revisão atrasada
+
+4. Função Utilitária Genérica
+
+Implemente uma função genérica que:
+
+    Aceite uma Frota de qualquer tipo que satisfaça Carro
+
+    Gere um relatório com:
+
+        Total de veículos por tipo de combustível/categoria
+
+        Status de manutenção agregado (ex: "% de carros com revisão em dia")
+
+Regras Específicas:
+
+    Use generics com constraints para restringir tipos aos que implementam Carro
+
+    Utilize interfaces para definir comportamentos comuns
+
+    Demonstre o uso com pelo menos 2 tipos de veículos diferentes
